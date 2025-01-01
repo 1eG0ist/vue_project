@@ -9,6 +9,7 @@ export default {
     <div @click="$router.push('/')" class="app-name"><strong>Name of app</strong></div>
     <button @click="$router.push('/posts')" class="route">Posts</button>
     <button @click="$router.push('/store')" class="route">Store Posts</button>
+    <button @click="$router.push('/composition')" class="route">Composition</button>
     <button @click="$router.push('/about')" class="route">About</button>
   </div>
 </template>
