@@ -30,6 +30,7 @@ export default {
         v-model="post.title"
         type="text"
         placeholder="Title"
+        v-focus
     />
     <default-input
         v-model="post.body"
