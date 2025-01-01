@@ -1,23 +1,18 @@
 <script>
+import toggleMixin from "@/mixins/toggleMixin";
+
 export default {
   name: "create-post-dialog",
-  props: {
-    show: {
-      type: Boolean,
-      default: false
-    }
-  },
-  methods: {
-    hideDialog() {
-      this.$emit("update:show", false)
-    }
-  }
+  mixins: [
+      toggleMixin
+  ]
 }
 </script>
 
 <template>
   <div class="dialog" v-if="show" @click.stop="hideDialog">
     <div class="dialog__content" @click.stop>
+      {{ $store.getters.getRealLikes }}
       <slot>
 
       </slot>
